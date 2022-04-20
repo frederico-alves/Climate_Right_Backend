@@ -10,6 +10,7 @@ exports.create = (req, res) => {
         }
         // Create a Tutorial
         const information = new Info({
+            name: req.body.name,
             description: req.body.description,
         });
         // Save Tutorial in the database
