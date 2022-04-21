@@ -67,6 +67,7 @@ exports.findAll = (req, res) => {
 
 // Update a Tutorial identified by the id in the request
 exports.update = (req, res) => {
+  const id = req.params.id;
    // Validate Request
    if (!req.body) {
     res.status(400).send({

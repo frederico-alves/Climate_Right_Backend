@@ -62,8 +62,8 @@ Info.getAll = (description, result) => {
 // };
 Info.updateById = (id, info, result) => {
   sql.query(
-    "UPDATE information SET description = ? WHERE id = ?",
-    [info.description, id],
+    "UPDATE information SET name = ?, description = ? WHERE id = ?",
+    [info.name, info.description, id],
     (err, res) => {
       if (err) {
         console.log("error: ", err);
