@@ -1,19 +1,24 @@
 module.exports = app => {
-    const informations = require("../controllers/tutorial.controller.js");
+    const informations = require("../controllers/info.controller.js");
     var router = require("express").Router();
-    // Create a new Tutorial
+
+    // Create a new info
     router.post("/", informations.create);
-    // Retrieve all Tutorials
+
+    // Retrieve all info
     router.get("/", informations.findAll);
-    // Retrieve all published Tutorials
-    //router.get("/published", informations.findAllPublished);
-    // Retrieve a single Tutorial with id
+
+    // Get info by ID
     router.get("/:id", informations.findOne);
-    // Update a Tutorial with id
+
+    // Update an info
     router.put("/:id", informations.update);
-    // Delete a Tutorial with id
+
+    // Delete an info
     router.delete("/:id", informations.delete);
-    // Delete all Tutorials
+
+    // Delete all info
     router.delete("/", informations.deleteAll);
+
     app.use('/api/information', router);
   };
