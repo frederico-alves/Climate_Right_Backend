@@ -3,7 +3,7 @@
 module.exports = {
     HOST: "localhost",
     USER: "root",
-    PASSWORD: "Rannout345",
+    PASSWORD: "",
     DB: "climatedb"
   };
 
