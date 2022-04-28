@@ -1,10 +1,10 @@
 const sql = require("./db.js");
 // constructor
 const Info = function(info) {
-  // this.title = info.title;
+
   this.name = info.name;
   this.description = info.description;
-  // this.published = info.published;
+
 };
 Info.create = (newInfo, result) => {
   console.log(newInfo);

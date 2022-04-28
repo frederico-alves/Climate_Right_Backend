@@ -3,7 +3,8 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:8100"
+  //origin: "http://localhost:8100"
+  origin:"https://climate-right-438e8.web.app"
 };
 
 app.use(cors(corsOptions));
