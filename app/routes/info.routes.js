@@ -6,7 +6,7 @@ module.exports = app => {
     router.post("/", informations.create);
 
     // Retrieve all info
-    router.get("/information", informations.findAll);
+    router.get("information", informations.findAll);
 
     // Get info by ID
     router.get("/:id", informations.findOne);
