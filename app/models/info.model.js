@@ -45,7 +45,7 @@ Info.getAll = (description, result) => {
       result(null, err);
       return;
     }
-    // console.log("Infos: ", res);
+     console.log("Infos: ", res);
     result(null, res);
   });
 };
