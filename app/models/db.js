@@ -7,9 +7,9 @@ const connection = mysql.createPool({
   password: dbConfig.PASSWORD,
   database: dbConfig.DB
 });
-connection.getConnection 
-// Info.getAll = (description, result) => {
-  connection.query = "SELECT * FROM information";
+
+Info.getAll = (description, result) => {
+  let query = "SELECT * FROM information";
   // if (description) {
   //   query += ` WHERE description LIKE '%${description}%'`;
   // }
@@ -22,14 +22,14 @@ connection.getConnection
      console.log("Infos: ", res);
     result(null, res);
   });
- //};
+};
 
 console.log ("connection is " + connection)
 // open the MySQL connection
 connection.connect(error => {
   if (error) throw error;
   console.log("<3 <3 <3 Successfully connected to our climatedb database <3 <3 <3");
-  console.log(`==>> Go to ==>> http://localhost:8080/api/information`);
+  console.log(`==>> Go to ==>> https://climate-right-backend.herokuapp.com/api/information`);
 
   connection.on ('error', function(err){
     if(err){console.log('2. error when connecting to db:', err);
