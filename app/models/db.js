@@ -1,4 +1,4 @@
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const dbConfig = require("../config/db.config.js");
 // Create a connection to the database
 const connection = mysql.createConnection({
@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
   database: dbConfig.DB
 });
 
-Info.getAll = (description, result) => {
+/*Info.getAll = (description, result) => {
   let query = "SELECT * FROM information";
   // if (description) {
   //   query += ` WHERE description LIKE '%${description}%'`;
@@ -23,7 +23,7 @@ Info.getAll = (description, result) => {
     result(null, res);
   });
 };
-
+*/
 console.log ("connection is " + connection)
 // open the MySQL connection
 connection.connect(error => {
