@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/a43cb527-185d-44c6-b33b-ccaa4a460ad4/resourceGroups/Climate-App/providers/Microsoft.Web/sites/climate-right",
+    "appService.deploySubpath": "."
+}

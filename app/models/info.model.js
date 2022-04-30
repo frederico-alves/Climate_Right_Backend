@@ -49,17 +49,7 @@ Info.getAll = (description, result) => {
     result(null, res);
   });
 };
-// Info.getAllPublished = result => {
-//   sql.query("SELECT * FROM information WHERE published=true", (err, res) => {
-//     if (err) {
-//       console.log("error: ", err);
-//       result(null, err);
-//       return;
-//     }
-//     console.log("Infos: ", res);
-//     result(null, res);
-//   });
-// };
+
 Info.updateById = (id, info, result) => {
   sql.query(
     "UPDATE information SET name = ?, description = ? WHERE id = ?",
