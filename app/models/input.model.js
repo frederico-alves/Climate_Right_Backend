@@ -8,7 +8,7 @@ const sql = require("./db.js");
     this.Humidity = input.Humidity;   
     this.zone = input.zone;
     this.Identifier =input.Identifier;
-    this.Date = input.Date=DATETIME.Now.ToString("MM/dd/yyyy HH:mm");
+    this.Date = input.Date=DATETIME.Now().ToString("MM/dd/yyyy HH:mm");
   
   };
 

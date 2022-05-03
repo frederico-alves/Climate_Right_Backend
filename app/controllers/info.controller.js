@@ -27,8 +27,8 @@ exports.create = (req, res) => {
 
 //Get all information from the database.
 exports.findAll = (req, res) => {
-    const title = req.query.title;
-    Info.getAll(title, (err, data) => {
+   // const title = req.query.title;
+    Info.getAll( (err, data) => {
         if (err)
         res.status(500).send({
             message:

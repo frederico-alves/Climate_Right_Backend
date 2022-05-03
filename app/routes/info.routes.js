@@ -4,26 +4,26 @@ module.exports = app => {
     var router = require("express").Router();
 
     // Create a new info
-    router.post("/api/information", informations.create);
+    router.post("/information", informations.create);
 
     // Retrieve all info
-    router.get("/api/information", informations.findAll);
+    router.get("/information", informations.findAll);
 
     // Get info by ID
-    router.get("/api/information/:id", informations.findOne);
+    router.get("/information/:id", informations.findOne);
 
     // Update an info
-    router.put("/api/information/:id", informations.update);
+    router.put("/information/:id", informations.update);
 
     // Delete an info
-    router.delete("/api/information/:id", informations.delete);
+    router.delete("/information/:id", informations.delete);
 
     // Delete all info
-    router.delete("/api/information", informations.deleteAll);
+    router.delete("/information", informations.deleteAll);
 
-     router.get("/api/input", inputs.findAllInputs);
+     router.get("/input", inputs.findAllInputs);
 
-     router.post("/api/input", inputs.createInput);
+     router.post("/input", inputs.createInput);
 
     app.use('/', router);
   };
