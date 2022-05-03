@@ -16,10 +16,10 @@ exports.createInput = (req, res) => {
         Humidity: req.body.Humidity,
         zone: req.body.zone,
         Identifier : req.body.Identifier,
-        Date: req.body.Date
+        Date: Date.now().toString()
     });
     // Save info in the database
-    Input.createInput(input, (err, data) => {
+    Input.createNewInput(input, (err, data) => {
         if (err)
         res.status(500).send({
             message:

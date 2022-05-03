@@ -4,16 +4,17 @@ const sql = require("./db.js");
 // constructor
   const Input = function(input) {
     this.Temperature = input.Temperature;
-    this.AiQuality = input.AiQuality;
+    this.AirQuality = input.AirQuality;
     this.Humidity = input.Humidity;   
     this.zone = input.zone;
     this.Identifier =input.Identifier;
-    this.Date = input.Date=DATETIME.Now().ToString("MM/dd/yyyy HH:mm");
+    this.Date = CURRENT_TIMESTAMP();
   
   };
 
+
   // post 
-  Input.create = (newInput, result) => {
+  Input.createNewInput = (newInput, result) => {
     console.log(newInput);
      sql.query("INSERT INTO input SET ?", newInput, (err, res) => {
        if (err) {
