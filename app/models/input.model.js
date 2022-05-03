@@ -8,8 +8,7 @@ const sql = require("./db.js");
     this.Humidity = input.Humidity;   
     this.zone = input.zone;
     this.Identifier =input.Identifier;
-    this.Date = CURRENT_TIMESTAMP();
-  
+    
   };
 
 

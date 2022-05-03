@@ -15,8 +15,7 @@ exports.createInput = (req, res) => {
         AirQuality: req.body.AirQuality,
         Humidity: req.body.Humidity,
         zone: req.body.zone,
-        Identifier : req.body.Identifier,
-        Date: Date.now().toString()
+        Identifier : req.body.Identifier
     });
     // Save info in the database
     Input.createNewInput(input, (err, data) => {
