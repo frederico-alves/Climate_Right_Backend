@@ -18,6 +18,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Here we manage our GET/POST/DELETE requests from climatedb DATABASE" });
 });
 require("./app/routes/info.routes.js")(app);
+//require("./app/routes/inputs.routes.js")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 3306;
 app.listen(PORT, () => {

@@ -1,24 +1,29 @@
 module.exports = app => {
     const informations = require("../controllers/info.controller.js");
+    const inputs = require("../controllers/input.controller.js")
     var router = require("express").Router();
 
     // Create a new info
-    router.post("/", informations.create);
+    router.post("/api/information", informations.create);
 
     // Retrieve all info
-    router.get("/", informations.findAll);
+    router.get("/api/information", informations.findAll);
 
     // Get info by ID
-    router.get("/:id", informations.findOne);
+    router.get("/api/information/:id", informations.findOne);
 
     // Update an info
-    router.put("/:id", informations.update);
+    router.put("/api/information/:id", informations.update);
 
     // Delete an info
-    router.delete("/:id", informations.delete);
+    router.delete("/api/information/:id", informations.delete);
 
     // Delete all info
-    router.delete("/", informations.deleteAll);
+    router.delete("/api/information", informations.deleteAll);
 
-    app.use('/api/information', router);
+     router.get("/api/input", inputs.findAllInputs);
+
+     router.post("/api/input", inputs.createInput);
+
+    app.use('/', router);
   };

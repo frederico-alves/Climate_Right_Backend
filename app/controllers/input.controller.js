@@ -1,7 +1,7 @@
 const Input = require("../models/input.model.js");
 
 // Create and Save a new input
-exports.create = (req, res) => {
+exports.createInput = (req, res) => {
     
     // Validate request
     if (!req.body) {
@@ -12,13 +12,14 @@ exports.create = (req, res) => {
     // Create an input
     const input = new Input({
         Temperature: req.body.Temperature,
-        Humidity: req.body.Humidity,
         AirQuality: req.body.AirQuality,
+        Humidity: req.body.Humidity,
         zone: req.body.zone,
-        Identifier : req.body.Identifier
+        Identifier : req.body.Identifier,
+        Date: req.body.Date
     });
     // Save info in the database
-    Input.create(input, (err, data) => {
+    Input.createInput(input, (err, data) => {
         if (err)
         res.status(500).send({
             message:
@@ -29,9 +30,9 @@ exports.create = (req, res) => {
 };
 
 //Get all inputs from the database.
-exports.findAll = (req, res) => {
+exports.findAllInputs = (req, res) => {
     const title = req.query.title;
-    Info.getAll(title, (err, data) => {
+    Input.getAllInputs(title, (err, data) => {
         if (err)
         res.status(500).send({
             message:

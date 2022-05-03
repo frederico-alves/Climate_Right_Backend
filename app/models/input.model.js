@@ -1,17 +1,18 @@
 const { DATETIME } = require("mysql/lib/protocol/constants/types");
 const sql = require("./db.js");
 
-const Input = function(input) {
-
+// constructor
+  const Input = function(input) {
     this.Temperature = input.Temperature;
-    this.Humidity = input.Humidity;
     this.AiQuality = input.AiQuality;
+    this.Humidity = input.Humidity;   
     this.zone = input.zone;
     this.Identifier =input.Identifier;
-    this.Date = DATETIME.Now.ToString("MM/dd/yyyy HH:mm");
+    this.Date = input.Date=DATETIME.Now.ToString("MM/dd/yyyy HH:mm");
   
   };
 
+  // post 
   Input.create = (newInput, result) => {
     console.log(newInput);
      sql.query("INSERT INTO input SET ?", newInput, (err, res) => {
@@ -25,7 +26,9 @@ const Input = function(input) {
      });
   };
 
-  Input.getAll = ( result) => {
+
+  //getAll
+  Input.getAllInputs = ( result) => {
     let query = "SELECT * FROM input";
    
     sql.query(query, (err, res) => {
