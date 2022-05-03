@@ -1,6 +1,6 @@
 module.exports = app => {
     const informations = require("../controllers/info.controller.js");
-    const inputs = require("../controllers/input.controller.js")
+    const inputs = require("../controllers/input.controller.js");
     var router = require("express").Router();
 
     // Create a new info

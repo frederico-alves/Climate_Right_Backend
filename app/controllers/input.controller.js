@@ -31,8 +31,7 @@ exports.createInput = (req, res) => {
 
 //Get all inputs from the database.
 exports.findAllInputs = (req, res) => {
-    const title = req.query.title;
-    Input.getAllInputs(title, (err, data) => {
+    Input.getAllInputs( (err, data) => {
         if (err)
         res.status(500).send({
             message:

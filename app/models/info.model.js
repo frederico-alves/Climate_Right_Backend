@@ -34,7 +34,7 @@ Info.findById = (id, result) => {
     result({ kind: "not_found" }, null);
   });
 };
-Info.getAll = (description, result) => {
+Info.getAll = (result) => {
   let query = "SELECT * FROM information";
   // if (description) {
   //   query += ` WHERE description LIKE '%${description}%'`;
