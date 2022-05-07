@@ -1,4 +1,4 @@
-const { DATETIME } = require("mysql/lib/protocol/constants/types");
+
 const sql = require("./db.js");
 
 // constructor
@@ -37,7 +37,7 @@ const sql = require("./db.js");
         result(null, err);
         return;
       }
-       console.log("Infos: ", res);
+       console.log("Inputs: ", res);
       result(null, res);
     });
   };

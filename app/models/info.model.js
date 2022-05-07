@@ -36,9 +36,7 @@ Info.findById = (id, result) => {
 };
 Info.getAll = (result) => {
   let query = "SELECT * FROM information";
-  // if (description) {
-  //   query += ` WHERE description LIKE '%${description}%'`;
-  // }
+  
   sql.query(query, (err, res) => {
     if (err) {
       console.log("error: ", err);

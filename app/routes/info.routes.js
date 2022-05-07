@@ -1,6 +1,7 @@
 module.exports = app => {
     const informations = require("../controllers/info.controller.js");
     const inputs = require("../controllers/input.controller.js");
+    const hightemperatures = require("../controllers/hightemperature.controller.js");
     var router = require("express").Router();
 
     // Create a new info
@@ -24,6 +25,8 @@ module.exports = app => {
      router.get("/input", inputs.findAllInputs);
 
      router.post("/input", inputs.createInput);
+
+     router.get("/hightemperature", hightemperatures.findAllHighTemperatures);
 
     app.use('/', router);
   };
