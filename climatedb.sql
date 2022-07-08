@@ -15,3 +15,4 @@ INSERT INTO information VALUES (4, "OTHER","DATA 3 <br><br> Other description");
 CREATE TABLE `input` ( Iid int NOT NULL PRIMARY KEY AUTO_INCREMENT, Temperature int NOT NULL, AirQuality int NOT NULL, Humidity int NOT NULL, zone int NOT NULL, Identifier varchar(25) NOT NULL, Date datetime default CURRENT_TIMESTAMP  );
 
 /*NEW SQL LINE ADDED*/
+/*NEW SQL LINE ADDED*/
